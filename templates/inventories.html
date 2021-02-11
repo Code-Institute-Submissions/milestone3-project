@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>I am extending the base template!</h2>
-
     {% for inventory in inventories %}
         {{ inventory.inventory_name }}<br>
         {{ inventory.category_name }}<br>
