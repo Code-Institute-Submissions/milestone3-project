@@ -8,18 +8,18 @@
     {% endfor %}
 
     <ul class="collapsible">
+        {% for inventory in inventories %}
         <li>
-            <div class="collapsible-header white-text grey darken-2 text-shadow"><i class="fas fa-caret-down"></i>First</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            <div class="collapsible-header white-text grey darken-2 text-shadow">
+                <i class="fas fa-caret-down"></i>
+                <strong>{{ inventory.inventory_name }}</strong>
+            </div>
+            <div class="collapsible-body">
+                <strong>{{ inventory.category_name }}</strong>
+                <p>{{ inventory.inventory_description }}</p>
+            </div>
         </li>
-        <li>
-            <div class="collapsible-header white-text grey darken-2 text-shadow"><i class="fas fa-caret-down"></i>Second</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-header white-text grey darken-2 text-shadow"><i class="fas fa-caret-down"></i>Third</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
+        {% endfor %}
     </ul>
 
 {% endblock %}
