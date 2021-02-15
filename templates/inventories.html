@@ -1,12 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for inventory in inventories %}
-        {{ inventory.inventory_name }}<br>
-        {{ inventory.category_name }}<br>
-        {{ inventory.inventory_description }}<br>
-    {% endfor %}
-
     <ul class="collapsible">
         {% for inventory in inventories %}
         <li>
