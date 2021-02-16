@@ -1,20 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="light-grey-text text-darken-4 center-align">Add Inventory</h3>
+    <h3 class="light-grey-text text-darken-4 center-align">Add Word</h3>
 
-    <div class="row">
+    <div class="row card-panel grey lighten-4">
         <form class="col s12" method="POST" action="">
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-user-circle prefix light-grey-text text-darken-4"></i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">First Name</label>
+                    <i class="fas fa-pencil-alt prefix light-grey-text text-darken-4"></i>
+                    <input id="inventory_name" name="inventory_name" minlength="5" maxlength="50" 
+                        type="text" class="validate" required>
+                    <label for="inventory_name">Word</label>
                 </div>
+            </div>
+            <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-phone prefix light-grey-text text-darken-4"></i>
-                    <input id="icon_telephone" type="tel" class="validate">
-                    <label for="icon_telephone">Telephone</label>
+                    <i class="fas fa-align-left prefix light-grey-text text-darken-4"></i>
+                    <textarea id="inventory_description" name="inventory_description" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="inventory_description">Meaning</label>
                 </div>
             </div>
         </form>
