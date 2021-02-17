@@ -111,6 +111,14 @@ def add_inventory():
     return render_template("add_inventory.html", categories=categories)
 
 
+@app.route("/edit_inventory/<inventory_id>", methods=["GET", "POST"])
+def edit_inventory(inventory_id):
+    inventory = mongo.db.inventories.find_one({"_id": ObjectId(inventory_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template(
+        "add_inventory.html", inventory=inventory, categories=categories)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
