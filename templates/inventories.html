@@ -1,16 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <h3 class="light-grey-text text-darken-4 center-align">All Words</h3>
+
     <ul class="collapsible">
         {% for inventory in inventories %}
         <li>
             <div class="collapsible-header white-text grey darken-2 text-shadow">
                 <i class="fas fa-caret-down"></i>
-                <strong>{{ inventory.inventory_name }}</strong>
+                <strong>{{ inventory.category_name }}</strong>
             </div>
             <div class="collapsible-body">
-                <strong>{{ inventory.category_name }}</strong>
+                <strong>{{ inventory.inventory_name }}</strong> :
                 <p>{{ inventory.inventory_description }}</p>
+                <p><em>by: {{ inventory.created_by }}</em></p>
             </div>
         </li>
         {% endfor %}

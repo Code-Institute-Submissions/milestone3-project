@@ -94,8 +94,19 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_inventory")
+@app.route("/add_inventory", methods=["GET", "POST"]) 
 def add_inventory():
+    if request.method == "POST":
+        inventory = {
+            "category_name": request.form.get("category_name"),
+            "inventory_name": request.form.get("inventory_name"),
+            "inventory_description": request.form.get("inventory_description"),
+            "created_by": session["user"]
+        }
+        mongo.db.inventories.insert_one(inventory)
+        flash("Word Successfully Added")
+        return redirect(url_for("get_inventories"))
+        
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_inventory.html", categories=categories)
 

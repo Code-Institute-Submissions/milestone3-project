@@ -4,7 +4,7 @@
     <h3 class="light-grey-text text-darken-4 center-align">Add Word</h3>
 
     <div class="row card-panel grey lighten-4">
-        <form class="col s12" method="POST" action="">
+        <form class="col s12" method="POST" action="{{ url_for('add_inventory') }}">
             <!-- category selection -->
 			<div class="row">
 				<div class="input-field col s12">
@@ -32,6 +32,13 @@
                     <textarea id="inventory_description" name="inventory_description" minlength="5"
                         maxlength="200" class="materialize-textarea validate" required></textarea>
                     <label for="inventory_description">Meaning</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button class="btn-large grey darken-1 text-shadow" type="submit">
+                        Add Word <i class="fas fa-plus-square right"></i>
+                    </button>
                 </div>
             </div>
         </form>
