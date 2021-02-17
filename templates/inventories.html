@@ -7,8 +7,14 @@
         {% for inventory in inventories %}
         <li>
             <div class="collapsible-header white-text grey darken-2 text-shadow">
-                <i class="fas fa-caret-down"></i>
-                <strong>{{ inventory.category_name }}</strong>
+                <div class="col s3">
+                    <i class="fas fa-caret-down"></i>
+                    <a href="" class="btn-small green accent-4">Done</a>
+                    <a href="" class="btn-small light-blue lighten-1">Edit</a>
+                </div>
+                <div class="col s9">
+                    <strong>{{ inventory.category_name }}</strong>
+                </div>    
             </div>
             <div class="collapsible-body">
                 <strong>{{ inventory.inventory_name }}</strong> :
