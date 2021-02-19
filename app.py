@@ -133,7 +133,13 @@ def edit_inventory(inventory_id):
 def delete_inventory(inventory_id):
     mongo.db.inventories.remove({"_id": ObjectId(inventory_id)})
     flash("Inventory Successfully Deleted")
-    return redirect(url_for("get_inventories")) 
+    return redirect(url_for("get_inventories"))
+
+
+@app.route("/get_categories")
+def get_categories():
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template("categories.html", categories=categories)
 
 
 if __name__ == "__main__":
