@@ -129,6 +129,13 @@ def edit_inventory(inventory_id):
         "edit_inventory.html", inventory=inventory, categories=categories)
 
 
+@app.route("/delete_inventory/<inventory_id>")
+def delete_inventory(inventory_id):
+    mongo.db.inventories.remove({"_id": ObjectId(inventory_id)})
+    flash("Inventory Successfully Deleted")
+    return redirect(url_for("get_inventories")) 
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
