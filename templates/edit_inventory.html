@@ -10,9 +10,13 @@
 				<div class="input-field col s12">
                     <i class="fas fa-folder-open prefix light-grey-text text-darken-4"></i>
 					<select id="category_name" name="category_name" class="validate" required>
-                        <option value="" disabled selected>Choose Category</option>
+                        <option value="" disabled>Choose Category</option>
                         {% for category in categories %}
-                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% if category.category_name == inventory.category_name %}
+                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                            {% else %}
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
 					<label for="category_name">Category</label>
@@ -22,20 +26,27 @@
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix light-grey-text text-darken-4"></i>
                     <input id="inventory_name" name="inventory_name" minlength="2" maxlength="50" 
-                        type="text" class="validate" required>
+                        value="{{ inventory.inventory_name }}" type="text" class="validate" required>
                     <label for="inventory_name">Word</label>
                 </div>
             </div>
+            <!-- inventory description  -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix light-grey-text text-darken-4"></i>
-                    <textarea id="inventory_description" name="inventory_description" minlength="5"
-                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <textarea id="inventory_description" name="inventory_description" minlength="2"
+                        maxlength="200" class="materialize-textarea validate" required>
+                        {{- inventory.inventory_description -}}
+                    </textarea>
                     <label for="inventory_description">Meaning</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col s12 center-align">
+                    <!-- cancel button -->
+                    <a href="{{ url_for('get_inventories') }}" class="btn-large red text-shadow">
+                        Cancel <i class="fas fa-times-circle right"></i>
+                    </a>
                     <button class="btn-large grey darken-1 text-shadow" type="submit">
                         Edit Word <i class="fas fa-edit right"></i>
                     </button>

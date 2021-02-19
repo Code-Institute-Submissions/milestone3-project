@@ -113,10 +113,20 @@ def add_inventory():
 
 @app.route("/edit_inventory/<inventory_id>", methods=["GET", "POST"])
 def edit_inventory(inventory_id):
+    if request.method == "POST":
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "inventory_name": request.form.get("inventory_name"),
+            "inventory_description": request.form.get("inventory_description"),
+            "created_by": session["user"]
+        }
+        mongo.db.inventories.update({"_id": ObjectId(inventory_id)}, submit)
+        flash("Word Successfully Updated")
+
     inventory = mongo.db.inventories.find_one({"_id": ObjectId(inventory_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
-        "add_inventory.html", inventory=inventory, categories=categories)
+        "edit_inventory.html", inventory=inventory, categories=categories)
 
 
 if __name__ == "__main__":
