@@ -23,12 +23,12 @@
                     {% endif %}
                 </div>
                 <div class="col s9">
-                    <strong>{{ inventory.category_name }}</strong>
+                    <strong>{{ inventory.inventory_name }}</strong>
                 </div>    
             </div>
             <div class="collapsible-body">
-                <strong>{{ inventory.inventory_name }}</strong> :
                 <p>{{ inventory.inventory_description }}</p>
+                <strong>{{ inventory.category_name }}</strong>
                 <p><em>by: {{ inventory.created_by }}</em></p>
             </div>
         </li>

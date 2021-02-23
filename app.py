@@ -22,6 +22,7 @@ mongo = PyMongo(app)
 @app.route("/get_inventories")
 def get_inventories():
     inventories = list(mongo.db.inventories.find().sort("category_name", 1))
+    inventories = list(mongo.db.inventories.find().sort("inventory_name", 1))
     return render_template("inventories.html", inventories=inventories)
 
 
