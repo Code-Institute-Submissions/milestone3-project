@@ -177,6 +177,11 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
+@app.route("/index")
+def index():
+    return render_template("index.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
