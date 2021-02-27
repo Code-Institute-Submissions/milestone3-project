@@ -1,4 +1,4 @@
-<img src="">
+<img src="/static/images/responsive.png" style="margin: 0; width: 80%;"><br>
 
 # Data Centric Development - Code Institute/O Akerele – Milestone3 Project 
 
@@ -10,19 +10,27 @@ Similarly, there is administrator priviledge who has the power to perform the CR
 only one that could introduce a new category before registered members could begin to perform the CRUD operation on<br> 
 the newly created category.<br>
 Furthermore, it is noteworthy that this site is work-in-progress as there is still a lot of room for improvement. For<br>
-example: password restriction,
-
-
+example: password restriction, populating the Profile Page with User personal profile and word contributions.
 
 # Table of Contents
-1. [User Experience](#user-experience)
+1. [UX](#ux)
+    - [Project Goal](#project-goal)
+    - [User Goal](#user-goal)
+    - [Developer Goal](#developer-goal)
+    - [User Stories](#user-stories)
+    - [Design Choices](#design-choices)
 2. [Wireframe](#wireframe)
 3. [Existing Features](#existing-features)
     - [Home Page](#home-page)
-    - [Facilities Page](#facilities-page)
-    - [Gallery Page](#gallery-page)
-    - [Contact Us](#contact-page)
-4. [Features to implement](#features-to-implement) 
+    - [All Words Page](#all-words-page)
+    - [Log In Page](#login-page)
+    - [Profile Page](#profile-page)
+    - [New Word Page](#new-word-page)
+    - [log Out Page](#logout-page)
+    - [Manage Category Page](#manage-category-page)
+4. [Features](#features)
+    - [Existing Features](#existing-features)
+    - [Features Left](#features-left)
 5. [Technologies Used](#technologies-used)
 6. [Testing](#testing)
 7. [Deployment](#deployment)
@@ -31,12 +39,23 @@ example: password restriction,
     - [Media](#media)
     - [Acknowledgement](#acknowledgement)
 
-# User Experience:
-
-The main goal, following the industry standards, was to make website easily accessible, include all<br> 
-information required while keeping minimalistic design. It is noteworthy that the website is progressive,<br> 
-that is, quite a lot of features can still be added to it and as the gym grows bigger with additional facilities,<br>
-they can be introduced to the website.
+# UX:
+## Project Goal
+The whole idea behind this project is to provide **Jargon Dictionary** where external users will be able to search for<br> 
+words/meanings and particularly for the users to be able to contribute their own words and definitions to the dictionary.<br>
+## User Goal
+The User goal is to be able to lookup for jargons according to their profession and the meaning of such word. Also, the user<br>
+will be able to populate the dictionary by adding new words and meanings.<br>
+## Developer Goal
+The Developer goal is mainly to collect good definitions of professional jargons which is to eventually be published into a<br> dictionary in form of a book.<br>
+## User Stories
+1. As a User I want to be able to search for a jargon and find the meaning to the word.
+2. As a User, I want to be able to contribute my quota e.g. if I know a new jargon that is not already in the dictionary, I<br> 
+want to be able to add it.
+3. As a User, I want to be able to Edit/Update my contributions to the dictionary.<br>
+4. As a User , I want to be able to Delete any of my contributions.
+## Design Choices
+Bearing in mind the three main purposes of design i.e. communication, aesthetics and functionality, I choose to use grey and light<br> grey with white background to build a beautiful and attractive user interface. Green, red, and light grey colors are used for the buttons.     
 
 # Wireframe using Balsamiq:
 * Sketching
@@ -44,41 +63,40 @@ they can be introduced to the website.
 * Features
 * Design with Balsamiq
 
-<a href="/workspace/My-first-milestone-project/master/images/New Wireframe.png">Wireframe</a>
+<a href="/workspace/milestone3-project/static/images/mobile sketch for home & allwords.png">Sketch1</a><br>
+<a href="/workspace/milestone3-project/static/images/mobile wireframe for home & allwords.png">Wireframe1</a><br>
+<a href="/workspace/milestone3-project/static/images/mobile sketch for login & register.png">Sketch2</a><br>
+<a href="/workspace/milestone3-project/static/images/mobile wireframe for login & register.png">Wireframe2</a><br>
+<a href="/workspace/milestone3-project/static/images/mobile sketch for profile &manage category1.png">Sketch3</a><br>
+<a href="/workspace/milestone3-project/static/images/mobile wireframe for profile & manage category1.png">Wireframe3</a><br>
 
 # Existing Features:
-There are 4 key pages on this website:
+There are 7 key pages on this website:
 * [Home Page](#home-page)
-* [Facilities Page](#facilities-page)
-* [Gallery Page](#gallery-page)
-* [Contact Us](#contact-page)
+* [All Words Page](#all-words-page)
+* [Log In Page](#login-page)
+* [Profile Page](#profile-page)
+* [New Word Page](#new-word-page)
+* [Log Out Page](#logout-page)
+* [Manage Category Page](manage-category-page)
 
-Every page is designed to show the header and the footer on top and bottom respectively.<br> 
-In the middle are the sections that display the message/information for the page.  The header<br> 
-contains the Logo for the gym and the menu for other pages. The logo was designed by myself and the<br> 
-menu bar design is borrowed from the Resume project. The footer contains the social media addresses<br> 
-of the gym.
+Every page is designed to show the navbar displaying the name of the dictionary and the interactive pages at the top right. The mobile<br> phone is designed to display the pages in a collapsible manner because of the number of pages to be displayed, the minimum of which is<br> four and maximum of six and some pages have lengthy name e.g. Manage Category. In the middle are the sections that display the<br> 
+message/information for the page.  The navbar was designed with the help of Materialize (materializecss.com).<br>
 
 ## Home page
 
-The Home page includes the logo, and menu bar on the top.  The middle contains the following:<br>
+The Home page is an introductory page for the **Jargon Dictionary.** It contains the navbar and only four pages viz: Home, All Words,<br> Log In and Register. The main page contains an introduction to what the the dictionary is all about. It defines Jargon and the types<br> of users which has been broken to Type 1 and Type 2.
 
-a)  	the about us section<br>
-b)	    the front view of the gym<br> 
-c)	    the opening times of the gym and<br>
-d)	    contact information e.g. address, phone number and email.<br>
+## All Words Page
 
-As mentioned before, the footer shows social media e.g. Facebook, Twitter etc addresses of the gym for contact purposes.
+This page like the previous page displays the navbar. The main body is the container for all the words contained in the dictionary and<br> they are arranged in alphabetical order. This is the page where all the new words contributed to the dictionary are recorded. It is<br> designed to show the word with a drop down arrow by its side, it is an accordion element that expand when clicked on to show:<br>
+1. word meaning,<br>
+2. category that the jargon belong to and<br>
+3. the name of the creator.<br>
 
-## Facilities Page
+## Log In
 
-The Facilities page gives information about available services in addition to the Header and Footer. At the moment only,<br> 
-6 facilities are available and they are - swimming; cardio; free weight; resistance; fitness and personal training. 
 
-## Gallery Page
-
-The third page is about the equipment, machines and tools available to members for training in pictures.<br> 
-This page is meant to advertise the equipment available to potential members to attract them to the gym.
 
 ## Contact Us
 

@@ -19,6 +19,11 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/index")
+def index():
+    return render_template("index.html")
+
+
 @app.route("/get_inventories")
 def get_inventories():
     inventories = list(mongo.db.inventories.find().sort("category_name", 1))
@@ -175,11 +180,6 @@ def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))
-
-
-@app.route("/index")
-def index():
-    return render_template("index.html")
 
 
 if __name__ == "__main__":
