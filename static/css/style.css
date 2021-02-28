@@ -14,3 +14,9 @@
     margin: 5px;
     line-height: 42px;
 }
+
+@media only screen and (max-width: 400px) {
+  nav .brand-logo {
+    font-size: 1.2rem;
+  }
+}

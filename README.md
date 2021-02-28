@@ -1,16 +1,11 @@
-<img src="/static/images/responsive.png" style="margin: 0; width: 80%;"><br>
+<img src="/static/Images/responsive.png" style="margin: 0; width: 80%;"><br>
 
 # Data Centric Development - Code Institute/O Akerele – Milestone3 Project 
 
 ***Preamble***<br>
-This is my Milestone3 project. It is a **Jargon Dictionary** that is designed to accommodate different professions.<br>
-The site is designed to allow registered members to contribute populate the dictionary. They are able to perform<br> 
-the following operation in the dictionary: Create, Read, Update and Delete (CRUD operation).<br> 
-Similarly, there is administrator priviledge who has the power to perform the CRUD operation and additionally, the<br> 
-only one that could introduce a new category before registered members could begin to perform the CRUD operation on<br> 
-the newly created category.<br>
-Furthermore, it is noteworthy that this site is work-in-progress as there is still a lot of room for improvement. For<br>
-example: password restriction, populating the Profile Page with User personal profile and word contributions.
+This is my Milestone3 project. It is a **Jargon Dictionary** that is designed to accommodate different<br> professions. The site is designed to allow registered members to contribute populate the dictionary. They are<br> able to perform the following operation in the dictionary: Create, Read, Update and Delete (CRUD operation).<br> 
+Similarly, there is administrator priviledge who has the power to perform the CRUD operation and additionally, the<br>
+only one that could introduce a new category before registered members could begin to perform the CRUD operation<br> on the newly created category. Furthermore, it is noteworthy that this site is work-in-progress as there is still<br> a lot of room for improvement. For example, password restriction, populating the Profile Page with User personal<br> profile together with his/her word contributions and adding a search button to the All Word Page.
 
 # Table of Contents
 1. [UX](#ux)
@@ -23,11 +18,12 @@ example: password restriction, populating the Profile Page with User personal pr
 3. [Existing Features](#existing-features)
     - [Home Page](#home-page)
     - [All Words Page](#all-words-page)
-    - [Log In Page](#login-page)
+    - [Register Page](#register-page)
+    - [Log In Page](#log-in-page)
     - [Profile Page](#profile-page)
     - [New Word Page](#new-word-page)
-    - [log Out Page](#logout-page)
     - [Manage Category Page](#manage-category-page)
+    - [log Out Page](#log-out-page)
 4. [Features](#features)
     - [Existing Features](#existing-features)
     - [Features Left](#features-left)
@@ -41,21 +37,18 @@ example: password restriction, populating the Profile Page with User personal pr
 
 # UX:
 ## Project Goal
-The whole idea behind this project is to provide **Jargon Dictionary** where external users will be able to search for<br> 
-words/meanings and particularly for the users to be able to contribute their own words and definitions to the dictionary.<br>
+The whole idea behind this project is to provide **Jargon Dictionary** where external users will be able to<br> search for words/meanings and particularly for the users to be able to contribute their own words and definitions<br> to the dictionary.<br>
 ## User Goal
-The User goal is to be able to lookup for jargons according to their profession and the meaning of such word. Also, the user<br>
-will be able to populate the dictionary by adding new words and meanings.<br>
+The User goal is to be able to lookup for jargons according to their profession and the meaning of such word.<br> Also, the user will be able to populate the dictionary by adding new words and meanings.<br>
 ## Developer Goal
-The Developer goal is mainly to collect good definitions of professional jargons which is to eventually be published into a<br> dictionary in form of a book.<br>
+The Developer goal is mainly to collect good definitions of professional jargons which is to eventually be<br> published into a dictionary in form of a book.<br>
 ## User Stories
-1. As a User I want to be able to search for a jargon and find the meaning to the word.
-2. As a User, I want to be able to contribute my quota e.g. if I know a new jargon that is not already in the dictionary, I<br> 
-want to be able to add it.
+1. As a User I want to be able to search for a jargon and find the meaning to the word.<br>
+2. As a User, I want to be able to contribute my quota e.g. if I know a new jargon that is not already in the<br> dictionary, I want to be able to add it.
 3. As a User, I want to be able to Edit/Update my contributions to the dictionary.<br>
-4. As a User , I want to be able to Delete any of my contributions.
+4. As a User , I want to be able to Delete any of my contributions.<br>
 ## Design Choices
-Bearing in mind the three main purposes of design i.e. communication, aesthetics and functionality, I choose to use grey and light<br> grey with white background to build a beautiful and attractive user interface. Green, red, and light grey colors are used for the buttons.     
+Bearing in mind the three main purposes of design i.e. communication, aesthetics and functionality, I choose to<br> use grey and light grey with white background to build a beautiful and attractive user interface. Green, red, and<br> light grey colors are used for the buttons.     
 
 # Wireframe using Balsamiq:
 * Sketching
@@ -63,110 +56,125 @@ Bearing in mind the three main purposes of design i.e. communication, aesthetics
 * Features
 * Design with Balsamiq
 
-<a href="/workspace/milestone3-project/static/images/mobile sketch for home & allwords.png">Sketch1</a><br>
-<a href="/workspace/milestone3-project/static/images/mobile wireframe for home & allwords.png">Wireframe1</a><br>
-<a href="/workspace/milestone3-project/static/images/mobile sketch for login & register.png">Sketch2</a><br>
-<a href="/workspace/milestone3-project/static/images/mobile wireframe for login & register.png">Wireframe2</a><br>
-<a href="/workspace/milestone3-project/static/images/mobile sketch for profile &manage category1.png">Sketch3</a><br>
-<a href="/workspace/milestone3-project/static/images/mobile wireframe for profile & manage category1.png">Wireframe3</a><br>
+<a href="static/Images/home&all-words.png">Sketch1</a><br>
+<a href="static/Images/home&all-words2.png">Wireframe1</a><br>
+<a href="static/Images/register&log-in.png">Sketch2</a><br>
+<a href="static/Images/register&log-in2.png">Wireframe2</a><br>
+<a href="static/Images/profile&new-word.png">Sketch3</a><br>
+<a href="static/Images/manage-category&log-out.png">Sketch4</a><br>
+<a href="static/Images/desktophome&all-words.png">Sketch5</a><br>
+<a href="static/Images/profile&new-word2.png">Wireframe3</a><br>
+<a href="static/Images/manage-category&log-out2.png">Wireframe4</a><br>
+<a href="static/Images/desktophome&all-words2.png">Wireframe5</a><br>
 
 # Existing Features:
-There are 7 key pages on this website:
+There are 8 key pages on this website:
 * [Home Page](#home-page)
 * [All Words Page](#all-words-page)
-* [Log In Page](#login-page)
+* [Register Page](#register-page)
+* [Log In Page](#log-in-page)
 * [Profile Page](#profile-page)
 * [New Word Page](#new-word-page)
-* [Log Out Page](#logout-page)
-* [Manage Category Page](manage-category-page)
+* [Manage Category Page](#manage-category-page)
+* [Log Out Page](#log-out-page)
 
-Every page is designed to show the navbar displaying the name of the dictionary and the interactive pages at the top right. The mobile<br> phone is designed to display the pages in a collapsible manner because of the number of pages to be displayed, the minimum of which is<br> four and maximum of six and some pages have lengthy name e.g. Manage Category. In the middle are the sections that display the<br> 
-message/information for the page.  The navbar was designed with the help of Materialize (materializecss.com).<br>
+Every page is designed to show the navbar displaying the name of the dictionary and the interactive pages at the<br> top right. The mobile phone is designed to display the pages in a collapsible manner because of the number of<br> pages to be displayed, the minimum of which is four and maximum of six and some pages have lengthy name e.g.<br> Manage Category. In the middle are the sections that display the message/information for the page.  The navbar<br> was designed with the help of Materialize (materializecss.com).<br>
 
 ## Home page
 
-The Home page is an introductory page for the **Jargon Dictionary.** It contains the navbar and only four pages viz: Home, All Words,<br> Log In and Register. The main page contains an introduction to what the the dictionary is all about. It defines Jargon and the types<br> of users which has been broken to Type 1 and Type 2.
+The Home page is an introductory page for the **Jargon Dictionary.** It contains the navbar and only four pages<br> viz: Home, All Words, Log In and Register. The main page contains an introduction to what the the dictionary is<br> all about. It defines Jargon and the types of users which has been broken to Type 1 and Type 2.<br>
 
 ## All Words Page
 
-This page like the previous page displays the navbar. The main body is the container for all the words contained in the dictionary and<br> they are arranged in alphabetical order. This is the page where all the new words contributed to the dictionary are recorded. It is<br> designed to show the word with a drop down arrow by its side, it is an accordion element that expand when clicked on to show:<br>
+This page like the previous page displays the navbar. The main body is the container for all the words contained<br> in the dictionary and they are arranged in alphabetical order. This is the page where all the new words contributed<br> to the dictionary are recorded. It is designed to show the word with a drop down arrow by its side, it is an accordion<br>element that expand when clicked on to show:<br>
 1. word meaning,<br>
 2. category that the jargon belong to and<br>
 3. the name of the creator.<br>
 
-## Log In
+## Register Page
 
+This page allows a new user to register and become a contributing member. A username and a password is required<br> and once that is acceptable, the user can always login to use the dictionary at anytime.
 
+## Log In Page
 
-## Contact Us
+This is the page that allows a registered user to log into their profile account page from where they can add their<br> own words (Create), search for all words (Read), edit their own words (Update) and delete their own words (Delete).<br> In other words, perform CRUD functionality. The username and a password is required to sign in.
 
-This page has been linked to the bottom of the home page where the address, the phone number and the email<br> 
-address of the gym can be located. 
+## Profile Page
+
+This is the page that a user is directed to upon signing in. This page is meant to contain the about-me of the user<br> and all the words contributed by him or her to the dictionary. It is worth noting however, that this page<br> is still a work-in-progress.
+
+## New Word Page
+
+Whenever a user wants to add word to the dictionary, he os she opens to this page and do the following:<br>
+1. Choose category (the profession that the jargon belongs),<br>
+2. Supply the word/jargon,<br>
+3. Supply the meaning and<br>
+4. Click add word.<br>
+
+That particular word then registers in All Word with the name of the user as the creator and it also registers in<br> the user's Profile Page.
+
+## Manage Category Page
+
+The manage category page is a reserved page for the Administrator of the Dictionary. The administrator has the<br> priviledge of being the only one that can populate the Categories and can perform the CRUD functionalities on the<br> whole dictionary. It is noteworthy, that anyone with the administrator password can act in that capacity.
+
+## Log Out Page
+
+This button should be clicked whenever a user has finished using the dictionary. When it is clicked, the user is<br> taken to the sign in page with a flash message "You have been logged out".
 
 
 # Features to implement
 
-As earlier stated, the website  is a work-in-progress and can still be improved upon. In the future, potential members<br> 
-will be able to register online to become members and those that just want to use the Gym's services without being<br> 
-members will be able to book online for whatever services they want at the time they want it from the comfort of their<br> 
-homes as against what obtains now (booking and paying over the phone and in the office).    
+As earlier stated, the website  is a work-in-progress and can still be improved upon. In the new version, user<br> will be able to search for word meaning by:<br>
+1. Word,<br>
+2. Profession and even by<br>
+3. Creator.<br>
+
+through the introduction of Search button at the top center of the All Word Page. The password will be with some<br> restrictions i.e. requiring it to include letters, figures, uppercases and characters and others noted above such<br> as the Profile Page.  
 
 # Technologies Used
 
 The following technologies were used to create the website:
-
 * Gitpod full template - workspace
-* Bootstrap 4.4.1 - used to simplify the structure and to make it responsive.
-* FontAwesome 4.7.0 - accessed for social media icons.
-* jquery 3.4.1 - used to reference Javascript modal
-* Google Fonts - used to style the website fonts.
+* HTML5 - used create the basic code for the pages.
+* CSS3 - Used to style the elements of the pages.
+* Materializecss 1.0.0 - used to simplify the structure and to make it responsive.
+* JavaScript - For the logic of some of the elements.
+* jquery 3.4.1 - used to reference Javascript and menu components.
+* Flask Framework - Used as the main framework for the website.
+* MongoDB - Used to store and retrieve the data created from the website.
+* Python version 3.8.7 - Used for routing and support alongside MongoDB and for interaction between pages
+* Google Chrome browser Developer Tools - Used for testing during development.
 * Balsamiq - the tool used to create the wireframe.
 
 # Testing
-
-## Header
-
-The header has a logo on the left-hand side and the menu bar at the right-hand side. The Menu contains the name and<br>  
-a Font Awesome icon for each of the features. When a user hovers their mouse over the menu, it hovers up to show the<br> 
-exact menu item that is to be opened for emphasis and the background color of ash. This has been manually tested and it<br> 
-works all across the web pages. Any of the pages can be seen and navigated from every page. It has been tested and found<br> 
-to be responsive. The header acts responsively across all resolutions too.
+## Navbar/Header
+  
+The header has the name of the Dictionary on the left-hand side and the pages at the right-hand side. Every name<br>on the navbar has a link to their main page. For example, the name of the dictionary in the navbar takes you<br> straight to the All Words page and the same holds true for the others. This has been tested manually and it works<br> nicely across all the devices. Materializecss technology was used to achieve this.   
   
 ## Home Page 
+The home page is an introductory page that contains only text which is meant for reading only. However, from the<br> navbar, both a new user and a registered user can navigate straight to All Words, register or login as the case<br> maybe. This was tested across all the devices and it works fine.
 
-The home page otherwise known as the landing page contains three sections viz: about us/picture of the front view of Fitness Always<br> 
-gym; the opening hours and contact details. The about us is a catching statement about the gymnasium to attract new customers.<br>
-It shared the row 50:50 with the front view photo of the gym. Section two is the opening hours of the gymnasium. It shows when the gym<br>
-is opened in the morning and closed in the night from Monday to Friday. This was styled to be positioned in the center. Finally, the contact<br> 
-session shows how the gym could be contacted either by post, telephone and/or email. The section is colored with gold after the menu<br> 
-bar contact-us color and linked with the contact page i.e. when the contact page is clicked from the menu bar, it links a user to this contact<br> 
-page and it does not matter which page the user is, once the contact page is clicked, it immediately directs the user to this section. This was<br> 
-tested across all the devices and it works fine.
+## All Words
+This is the page that contains all the words in the dictionary and both a registered and non registered user can<br> lookup word and meaning from this page. All a user need to do is look for the word, drop down the accordion to<br> see the meaning, category and creator of the word. This fulfills the first user story. It has been tested across<br> all the devices and it renders nicely.
 
-## Facilities Page
-
-This page explains to potential customers what services are available in the gym. At the moment, only six services are available but as time<br> 
-goes on, the gym will expand and add other services. The services are styled with Font Awesome Icons by the side of the title of each service.<br>
-The test carried out on this page was to navigate to it from another page and it works fine. Also, it works nicely across all the devices: mobile<br> 
-phone, iPad and desktop. 
-
-## Gallery Page
-
-When a user navigates to this page, it shows the different pictures of machines and tools available for use in the gymnasium. The pictures are<br> 
-nicely padded to differentiate them from one another. It has been tested to show these pictures across all the devices and the page can be navigated<br> 
-from other pages.
+## Registration form
+As a new user, you need to register so as to be able to contribute to the dictionary. In the registration form,<br> if you try to submit the form without filling any of the required filled, an error message appears asking "Please<br> fill out this field". Furthermore, if you supply unacceptable password i.e. lesser characters, an error message<br> pops up asking "please match the reqested format" and if you attempt to supply more characters than allowed, it<br> will not accept it and when you try to register an already registered details, it will report back that "Username<br> already exists".<br>
+There is a light blue line separating the required fields, this changes to red during filling in of the fields<br> and changes back to blue when correctly filled-in otherwise it remains red to remind user of the next step. Also,<br> a link is at the bottom of the form to re-direct registered user to Login page. All these controls have been<br> manually tested and found to be working effectively. 
  
-## Contact Us Page
+## Login Form
+If a wrong username or password is supplied an error message returns with a new login page saying "Incorrect<br> Username and/or Password and if you try to submit the form without filling any of the required filled, an error<br> message appears asking "Please fill out this field". There is a light blue line separating the required fields,<br> this changes to red during filling in of the fields and changes back to blue when correctly filled in otherwise<br> it remains red to remind user of the next step. Also, a link is at the bottom of the form to re-direct new user<br> to Registration page. All these functionalities have been tested and found to be working properly.
 
-This has been explained vividly in section 3 of the home page. When this page is clicked, it takes the user straight to that section of the home page<br>
-and this has been tested and found to be true from all other pages.
+## Profile
 
-## Footer
+This page is still a work-in-progress. In the meantime, the page renders nicely and a user can navigate through<br> other pages from there.
+ 
+## New Word Form
 
-The footer contains just the social media i.e. Facebook; Linkedin; Instagram; Twitter and YouTube. It is designed to share a<br> 
-light green color with the facilities menu and centered. It is also designed to be sticky. The social media are represented by<br> 
-Font Awesome Icons which are also styled with hover effect when the mouse goes over the icons. This has been tested across all<br> 
-the pages and it holds. 
+This is where all the words in the dictionary is generated. The form is designed similar to the other forms,there<br> is a light blue line separating the required fields, this changes to red during filling in of the fields and<br> changes back to blue when correctly filled in otherwise it remains red to remind user of the next step. Also, if<br> you try to submit the form without filling any of the required filled, an error message appears asking "Please<br> fill out this field". When all the fields are correctly filled out and the Add Word button is pressed, it takes<br> that user to his/her All Words Page with a message "Word Succesfully Added". I have manually tested all these and<br> they are working very fine.
+
+## Manage Category
+
+This page is the exclusive preserve of the administrator. From here, the administrator can perform the CRUD operation on category which is why the page is actually named Manage Category. He/She can also perform CRUD operations on All Words.
 
 ## SPELLING & GRAMMAR
 
