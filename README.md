@@ -119,7 +119,7 @@ The manage category page is a reserved page for the Administrator of the Diction
 
 This button should be clicked whenever a user has finished using the dictionary. When it is clicked, the user is<br> taken to the sign-in page with a flash message "You have been logged out".
 
-# Features to implement
+# Features To Implement
 
 As earlier stated, the website is a work-in-progress and can still be improved upon. In the new version, user<br> will be able to search for word meaning by:<br>
 1. Word,<br>
