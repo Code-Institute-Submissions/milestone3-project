@@ -5,7 +5,8 @@
 ***Preamble***<br>
 This is my Milestone3 project. It is a **Jargon Dictionary** that is designed to accommodate different<br> professions. The site is designed to allow registered members to contribute populate the dictionary. They can<br> perform the following operation in the dictionary: Create, Read, Update and Delete (CRUD operation).<br> 
 Similarly, there is an administrator privilege who has the power to perform the CRUD operation and additionally, the<br>
-only one that could introduce a new category before registered members could begin to perform the CRUD operation<br> on the newly created category. Furthermore, it is noteworthy that this site is work-in-progress as there is still<br> a lot of room for improvement. For example, password restriction, populating the Profile Page with User personal<br> profile together with his/her word contributions and adding a search button to the All Word Page.
+only one that could introduce a new category before registered members could begin to perform the CRUD operation<br> on the newly created category. Furthermore, it is noteworthy that this site is work-in-progress as there is still<br> a lot of room for improvement. For example, password restriction, populating the Profile Page with User personal<br> profile together with his/her word contributions and adding a search button to the All Word Page.<br>
+The ***Jargon Dictionary*** will be built using Flask, Python3, MongoDB and a frontend framework called Materialize.
 
 # Table of Contents
 1. [UX](#ux)
@@ -192,39 +193,42 @@ Jargon Dictionary text content and this Readme file have been tested for grammar
 #### W3C Mark-up Validation Service and
 #### W3C CSS Validation Service
 
-The check carried out by W3C Mark-up Validation service showed that there is a closing p tag -</p> without the corresponding opening p tag -<p>. When I checked through, I discovered it wasn't true. I provide the screenshot to prove this. Also, it warned that that the section in my base html has no heading. This I considered un-necessary because it's not going to be displayed on the website. The screenshot for this is also attached as follows:
-<img src="/static/Images/html-checker.png" style="margin: 0; width: 50%;">  
-<img src="/static/Images/html-check.png" style="margin: 0; width: 50%;">
+The check carried out by W3C Mark-up Validation service showed that there is a closing p tag without the<br> corresponding opening p tag. When I checked through, I discovered it wasn't true. I provide the screenshot to<br> prove this. Also, it warned that the section in my base html has no heading. This I considered un-necessary<br> because it's not going to be displayed on the website. The screenshot for this is also attached as follows:
+
+<img src="/static/Images/html-checker.jpg" style="margin: 0; width: 80%;">
+
+<img src="/static/Images/html-check.png" style="margin: 0; width: 100%;">
 
 The W3C CSS Validation Service gave a clean bill of healthas shown below.
-<img src="/static/Images/css-check.png" style="margin: 0; width: 50%;">  
+
+<img src="/static/Images/css-check.png" style="margin: 0; width: 100%;">  
 
 This site has met the objective of creating an online presence with minimalistic design and content but providing<br> enough information and platform to enable fast contact.<br>
 The website has been tested across multiple browsers (Chrome, Safari, Firefox) and different screen sizes<br> 
-(Galaxy C5, various iPhones, Huawei, iPad, iPad Pro and laptops) to make sure it is responsive. Materialize has been used to achieve this.<br>
+(Galaxy C5, various iPhones, Huawei, iPad, iPad Pro and laptops) to make sure it is responsive. Materialize has<br> been used to achieve this.<br>
 All fonts, images and other attributes have been changed accordingly to fit different screen sizes. Media queries have<br> been used to make them work.
 
 
 # Deployment 
 
 The site was developed using Gitpod full template - workspace to commit and push to GitHub.<br>
-GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight<br>
+GitHub Pages is a static site hosting service that takes HTML, CSS, JavaScript and Python files straight<br>
  from a repository on GitHub, optionally runs the files through a build process, and publishes a website.
 
 ## The following steps can be taken to access my page from the GitHub repository. 
 
-On Github navigate to my-first-milestone-project<br>
+On Github navigate to milestone3-project<br>
 From the menu at the top click on settings<br>
 Scroll down to the GitHub pages section<br>
 Under the Source section click on the dropdown menu and select Master Branch as your GitHub Pages publishing source.<br>
 Select save.
 
 ## To Clone the Repository
-Navigate to the Github remote repository: oakerele-web.github.io<br>
-Click 'Clone or Download'.<br>
+Navigate to the Github remote repository: https://github.com/oakerele-web/milestone3-project<br>
+Click Code drop down button to open the Clone or Download window.<br>
 Copy the clone HTTPS or SSH by clicking on the copy button.<br>
 Open Git Bash.<br>
-Change the current working directory to the location where you want the cloned directory to be made.<br>
+Change the current working directory to the location where you want the cloned directory to be made (e.g. /workspace/clone_test ).<br>
 Type git clone, and then paste the URL you copied.<br>
 Press Enter. Your local clone will be created.<br>
 
@@ -232,28 +236,69 @@ Press Enter. Your local clone will be created.<br>
 
 https://github.com/oakerele-web/milestone3-project
 
+### Creating an env.py file
+
+Environment variables needed by the server application need to be recorded.
+
+```
+import os
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "***************")
+os.environ.setdefault("MONGO_URI", "***********")
+os.environ.setdefault("MONGO_DBNAME", "jargon_dict") 
+```
+
+### Creating file .gitignore
+
+The file above contains sensitive keys and passwords, so need not published by GitHub.
+
+```
+core.Microsoft*
+core.mongo*
+core.python*
+env.py
+__pycache__/
+*.py[cod]
+```
+
+### Deployment to Heroku.
+
+Register a Heroku account.
+
+Create new app **milestone3-project** with an appropriately close region (Europe).
+
+From Heroku's deploy tab the GitHub deployment method was selected.
+
+The github connection searched for oakerele's repository 'milestone3-project.
+
+From Heroku's settings tab, select 'Reveal Config Vars'.<br>
+Add the **key:value** pairs with the same settings as the ***env.py*** file above.<br>
+
+- IP                0.0.0.0<br>
+- MONGO_DBNAME      jargon_dict<br>
+- MONGO_URI         *************
+- PORT              5000
+- SECRET_KEY        **************
+
+
+
+### Heroku application to run
+
+http://milestone3-project.herokuapp.com
 
 # Credits 
 
 ## Content 
 
-All the text contents in this project are original because they are written by me.  
-
-## Media 
-
-All icons are from the Bootstrap website including the styling while the font styling is from Font Awesome website.<br> 
-The Logo was formed and designed by me through Placeit.org using the fake name formed for the gym.<br>
-Pictures used in the gallery page and the home page were copied from existing websites of gyms on the internet<br>
+The text contents in this project are written by me and the others such as definition and description of Jargon<br> are copied from the internet. However, I borrowed the pattern used from the Task-Manager-Mini-Project of the Code<br> Institute written by: Tim Nelson a tutor of the institute. He actually advised students to use the project as a<br> guide to writing our own project which I did.<br> 
 
 ## Acknowledgments 
 
-The Codeinstitute Resume project by Matt Rudge is what inspired this project and I chose this project from a list of<br>
-other proposed projects by the Institute.<br>
-Special thanks to Maranatha Ilesanmi - my course mentor - first for his objective view of the project at the selection<br> 
-stage then assisting me with applications for my Wireframe/Mockups and finally this Milestone 1 project which he has helped<br> 
-me a lot to review, re-structure and suggested solutions to my pertinent questions. I also thank Claire of the Student Care<br> 
-department for her support and understanding when I needed adjustment to my calendar. I am also grateful to all our colleagues<br>
-in Slack, thank you.   
+The Codeinstitute Task-Manager-mini-project by Tim Nelson is what inspired this project and I chose this project<br> from a list of other proposed projects by the Institute.<br>
+Special thanks to Maranatha Ilesanmi - my course mentor - first for suggesting the choice of this project and<br> secondly, for his objective criticism of the project.<br>
+Further help was found with w3schools.<br> 
+Finally, I am also grateful to all our colleagues in Slack, thank you.   
 
 ## Disclaimer 
 
