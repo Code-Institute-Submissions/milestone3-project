@@ -16,7 +16,7 @@
 }
 
 @media only screen and (max-width: 601px) {
-  nav .brand-logo {
+  nav div .brand-logo {
     font-size: 1.2rem;
   }
 }

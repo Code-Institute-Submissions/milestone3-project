@@ -3,10 +3,10 @@
 # Data Centric Development - Code Institute/O Akerele – Milestone3 Project 
 
 ***Preamble***<br>
-This is my Milestone3 project. It is a **Jargon Dictionary** that is designed to accommodate different<br> professions. The site is designed to allow registered members to contribute populate the dictionary. They can<br> perform the following operation in the dictionary: Create, Read, Update and Delete (CRUD operation).<br> 
+This is my Milestone3 project. It is a **Jargon Dictionary** that is designed to accommodate different<br> professions. The site is designed to allow registered members to contribute their jargons, thereby populating the<br> dictionary. They can perform the following operation on the dictionary: Create, Read, Update and Delete (CRUD operation).<br> 
 Similarly, there is an administrator privilege who has the power to perform the CRUD operation and additionally, the<br>
 only one that could introduce a new category before registered members could begin to perform the CRUD operation<br> on the newly created category. Furthermore, it is noteworthy that this site is work-in-progress as there is still<br> a lot of room for improvement. For example, password restriction, populating the Profile Page with User personal<br> profile together with his/her word contributions and adding a search button to the All Word Page.<br>
-The ***Jargon Dictionary*** will be built using Flask, Python3, MongoDB and a frontend framework called Materialize.
+The ***Jargon Dictionary*** is built using Flask, Python3, MongoDB and a frontend framework called Materialize.
 
 # Table of Contents
 1. [UX](#ux)
@@ -275,15 +275,15 @@ The github connection searched for oakerele's repository 'milestone3-project.
 From Heroku's settings tab, select 'Reveal Config Vars'.<br>
 Add the **key:value** pairs with the same settings as the ***env.py*** file above.<br>
 
-- IP                0.0.0.0<br>
-- MONGO_DBNAME      jargon_dict<br>
-- MONGO_URI         *************
-- PORT              5000
-- SECRET_KEY        **************
+- IP:                0.0.0.0<br>
+- MONGO_DBNAME:      jargon_dict<br>
+- MONGO_URI:         *************
+- PORT:              5000
+- SECRET_KEY:        **************
 
 
 
-### Heroku application to run
+### Heroku application to run:
 
 http://milestone3-project.herokuapp.com
 
